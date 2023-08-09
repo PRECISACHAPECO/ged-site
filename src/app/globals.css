@@ -6,3 +6,23 @@
     width: min(1200px, 98vw);
     margin: 0 auto;
 }
+
+body {
+    color: #011D2C;
+    overflow-x: hidden;
+}
+
+/*!Scroll costumizado */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    heigth: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4A8B57;
+    border-radius: 1rem;
+}
+
+::-webkit-scroll-track {
+    background-color: transparent;
+}
