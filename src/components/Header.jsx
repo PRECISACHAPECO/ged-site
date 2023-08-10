@@ -7,19 +7,20 @@ const Header = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(
         Math.floor(Math.random() * imagesHeader.length)
     )
+    console.log('🚀 ~ currentImageIndex:', currentImageIndex)
 
     useEffect(() => {
         let currentIndex = currentImageIndex
 
         const interval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % imagesHeader.length
             setCurrentImageIndex(currentIndex)
+            currentIndex = (currentIndex + 1) % imagesHeader.length
         }, 2000)
 
         return () => {
             clearInterval(interval)
         }
-    }, [currentImageIndex])
+    }, [])
 
     return (
         <div className="w-screen h-screen overflow-hidden relative">
@@ -37,7 +38,7 @@ const Header = () => {
                         index === currentImageIndex
                             ? 'opacity-100'
                             : 'opacity-0'
-                    } absolute inset-0`}
+                    } transition-opacity duration-1000 ease-in-out absolute inset-0`}
                     src={`https://gedagro.com.br/images/site/banners/${image.url}`}
                     alt=""
                 />
