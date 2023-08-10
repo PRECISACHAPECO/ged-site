@@ -7,7 +7,6 @@ const Header = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(
         Math.floor(Math.random() * imagesHeader.length)
     )
-    console.log('🚀 ~ currentImageIndex:', currentImageIndex)
 
     useEffect(() => {
         let currentIndex = currentImageIndex

@@ -1,3 +1,5 @@
+'use client'
+import Form from '@/components/Formulario/page'
 import Header from '@/components/Header'
 import Section from '@/components/Section'
 
@@ -156,6 +158,7 @@ export default function Home() {
                         Faça upload e centralize todos os documentos
                     </h1>
                 </Section>
+                <Form />
             </div>
 
             <h1 className="h-[900px]"></h1>
