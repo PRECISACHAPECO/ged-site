@@ -5,8 +5,6 @@ import Button from './Button'
 
 const Header = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
-    const [transition, setTransition] = useState(false)
-    const [translateX, setTranslateX] = useState(0)
 
     useEffect(() => {
         let currentIndex = currentImageIndex
@@ -59,8 +57,11 @@ const Header = () => {
                         </p>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Button title="Solicite uma apresentação" />
-                        <Button title="Acessar o sistema" />
+                        <Button title="Fale Conosco" href="#contato" />
+                        <Button
+                            title="Acessar o Sistema"
+                            href="http://app.gedagro.com.br"
+                        />
                     </div>
                 </div>
             </div>

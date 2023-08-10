@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <main>
             <Header />
-            <div className="widthDefault">
+            <div className="widthDefault pb-8">
                 <Section
                     src="document.svg"
                     content={
@@ -38,7 +38,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
-                    src="document.svg"
+                    src="tecnology.svg"
                     imageOrder={1}
                     content={
                         <>
@@ -67,11 +67,11 @@ export default function Home() {
                     }
                 >
                     <h1 className="text-greenLigth text-[40px] font-extrabold">
-                        Pra quer vou usar o GEDagro?
+                        Porque vou usar o GEDagro?
                     </h1>
                 </Section>
                 <Section
-                    src="document.svg"
+                    src="security.svg"
                     content={
                         <>
                             <p>
@@ -96,7 +96,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
-                    src="document.svg"
+                    src="form.svg"
                     imageOrder={1}
                     content={
                         <>
@@ -118,7 +118,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
-                    src="document.svg"
+                    src="responsive.svg"
                     content={
                         <>
                             <p>
@@ -139,7 +139,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
-                    src="document.svg"
+                    src="upload.svg"
                     imageOrder={1}
                     content={
                         <>
@@ -160,8 +160,6 @@ export default function Home() {
                 </Section>
                 <Form />
             </div>
-
-            <h1 className="h-[900px]"></h1>
         </main>
     )
 }

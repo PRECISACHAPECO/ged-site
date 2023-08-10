@@ -7,6 +7,10 @@
     margin: 0 auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #011D2C;
     overflow-x: hidden;
