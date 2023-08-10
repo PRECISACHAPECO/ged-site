@@ -5,9 +5,8 @@ import Select from './InputSelect'
 import states from '@/data/states'
 import InputTextArea from './InputTextArea'
 import ButtonForm from './ButtonForm'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import Toast from '../Toast'
+import emailjs from 'emailjs-com'
 
 const Form = () => {
     const [isSending, setIsSending] = useState(false)
@@ -21,19 +20,42 @@ const Form = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        setIsSending(true)
+        const values = {
+            nome: data.nome,
+            email: data.email,
+            empresa: data.empresa != '' ? data.empresa : 'Não informado',
+            telefone: data.telefone != '' ? data.telefone : 'Não informado',
+            cidade:
+                data.cidade != ''
+                    ? `${data.cidade}/${data.estado}`
+                    : data.estado,
+            mensagem: data.mensagem,
+        }
+        console.log('🚀 ~ values:', values)
 
-        setTimeout(() => {
-            setIsSending(false)
-            reset()
-            setToastData({
-                status: 'true',
-                message: 'Mensagem enviada com sucesso!',
+        // Enviar email com os dados do formulário com emailJS e resetar o formulário
+        setIsSending(true)
+        emailjs
+            .send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                values,
+                process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+            )
+            .then((result) => {
+                reset()
+
+                setTimeout(() => {
+                    setIsSending(false)
+                    setToastData({
+                        status: true,
+                        message: 'Sua mensagem foi enviada com sucesso!',
+                    })
+                    setTimeout(() => {
+                        setToastData(null)
+                    }, 2000)
+                }, 2000)
             })
-            setTimeout(() => {
-                setToastData(null)
-            }, 2000)
-        }, 2000)
     }
 
     return (

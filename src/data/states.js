@@ -25,7 +25,8 @@ const states = [
     { label: 'Santa Catarina', value: 'SC' },
     { label: 'São Paulo', value: 'SP' },
     { label: 'Sergipe', value: 'SE' },
-    { label: 'Tocantins', value: 'TO' }
+    { label: 'Tocantins', value: 'TO' },
+    { label: 'Exterior', value: 'EX' }
 ];
 
 export default states;

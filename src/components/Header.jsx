@@ -24,7 +24,7 @@ const Header = () => {
     return (
         <div className="w-screen h-screen overflow-hidden relative">
             <div
-                className="absolute inset-0 z-10"
+                className="absolute inset-0 z-20"
                 style={{
                     background:
                         'linear-gradient(-60deg, transparent 0%, transparent 60%, #4A8B57 60%, #4A8B57 100%)',

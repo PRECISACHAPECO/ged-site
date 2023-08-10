@@ -17,7 +17,6 @@ const InputSelect = ({ register, errors, label, name, required, data }) => {
                         required,
                     })}
                 >
-                    <option value="">Selecione...</option>
                     {data.map((option, index) => (
                         <option key={index} value={option.value}>
                             {option.label}

@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    color: #011D2C;
+    color: #011d2c;
     overflow-x: hidden;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #4A8B57;
+    background-color: #4a8b57;
     border-radius: 1rem;
 }
 
