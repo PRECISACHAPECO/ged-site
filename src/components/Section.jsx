@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Section = ({ imageOrder, children, content }) => {
+const Section = ({ imageOrder, children, content, src }) => {
     return (
         <section className="flex flex-col md:flex-row items-center gap-10 pt-24 w-full">
             <div
@@ -21,7 +21,7 @@ const Section = ({ imageOrder, children, content }) => {
                         : 'order-2 md:order-1'
                 }`}
             >
-                <img src="document.svg" alt="" />
+                <img src={src} alt="" />
             </div>
         </section>
     )

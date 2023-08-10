@@ -7,6 +7,7 @@ export default function Home() {
             <Header />
             <div className="widthDefault">
                 <Section
+                    src="document.svg"
                     content={
                         <>
                             <p>O nome é a união dos termos GED+agro, onde:</p>
@@ -35,6 +36,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
+                    src="document.svg"
                     imageOrder={1}
                     content={
                         <>
@@ -67,6 +69,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
+                    src="document.svg"
                     content={
                         <>
                             <p>
@@ -91,6 +94,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
+                    src="document.svg"
                     imageOrder={1}
                     content={
                         <>
@@ -112,6 +116,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
+                    src="document.svg"
                     content={
                         <>
                             <p>
@@ -132,6 +137,7 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Section
+                    src="document.svg"
                     imageOrder={1}
                     content={
                         <>
