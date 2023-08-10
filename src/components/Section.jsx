@@ -21,7 +21,7 @@ const Section = ({ imageOrder, children, content }) => {
                         : 'order-2 md:order-1'
                 }`}
             >
-                <img src="next.svg" alt="" />
+                <img src="document.svg" alt="" />
             </div>
         </section>
     )

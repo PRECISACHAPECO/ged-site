@@ -4,13 +4,18 @@ import { useState, useEffect } from 'react'
 import Button from './Button'
 
 const Header = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [currentImageIndex, setCurrentImageIndex] = useState(
+        Math.floor(Math.random() * imagesHeader.length)
+    )
+    console.log('🚀 ~ currentImageIndex:', currentImageIndex)
 
     useEffect(() => {
+        let currentIndex = currentImageIndex
+
         const interval = setInterval(() => {
-            const randomIndex = Math.floor(Math.random() * imagesHeader.length)
-            setCurrentImageIndex(randomIndex)
-        }, 5000)
+            setCurrentImageIndex(currentIndex)
+            currentIndex = (currentIndex + 1) % imagesHeader.length
+        }, 2000)
 
         return () => {
             clearInterval(interval)
@@ -23,15 +28,21 @@ const Header = () => {
                 className="absolute inset-0 z-10"
                 style={{
                     background:
-                        'linear-gradient(-60deg, transparent 0%, transparent 60%, green 60%, green 100%)',
+                        'linear-gradient(-60deg, transparent 0%, transparent 60%, #4A8B57 60%, #4A8B57 100%)',
                 }}
             />
-
-            <img
-                className="w-full h-full object-cover"
-                src={`https://gedagro.com.br/images/site/banners/${imagesHeader[currentImageIndex].url}`}
-                alt=""
-            />
+            {imagesHeader.map((image, index) => (
+                <img
+                    key={index}
+                    className={`w-full h-full object-cover ${
+                        index === currentImageIndex
+                            ? 'opacity-100'
+                            : 'opacity-0'
+                    } transition-opacity duration-1000 ease-in-out absolute inset-0`}
+                    src={`https://gedagro.com.br/images/site/banners/${image.url}`}
+                    alt=""
+                />
+            ))}
             <div className="w-full h-full absolute inset-0 flex items-center z-20">
                 <div className="w-full max-w-md rounded-lg ml-0 md:ml-[120px] pb-[200px] flex flex-col gap-6">
                     <img
