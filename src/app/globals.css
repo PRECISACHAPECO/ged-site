@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .widthDefault {
-    width: min(1200px, 98vw);
+    width: min(1200px, 90vw);
     margin: 0 auto;
 }
 

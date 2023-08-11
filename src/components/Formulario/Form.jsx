@@ -62,7 +62,7 @@ const Form = () => {
         <>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="w-full border border-black/10 shadow-xl p-8 rounded-xl"
+                className="w-full border border-black/10 shadow-xl p-4 md:p-8 rounded-xl"
             >
                 <div>
                     <h1 className="text-3xl font-semibold">Contato</h1>
@@ -122,7 +122,7 @@ const Form = () => {
                             name="mensagem"
                         />
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-2 md:mt-4">
                         <ButtonForm
                             isSending={isSending}
                             label={isSending ? 'Enviando...' : 'Enviar'}

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div className="h-4 w-full flex justify-between items-center mt-24 opacity-60 text-sm ">
+        <div className="h-4 w-full flex flex-col gap-1 md:gap-0 md:flex-row justify-between items-center mt-24 opacity-60 text-sm ">
             <div>
                 © {new Date().getFullYear()}{' '}
                 <span className="font-semibold">GEDagro</span>. Todos os

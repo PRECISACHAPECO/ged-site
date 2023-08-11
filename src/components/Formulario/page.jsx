@@ -3,8 +3,11 @@ import Form from './Form'
 
 const Page = () => {
     return (
-        <section className="pt-20 flex items-center gap-10" id="contato">
-            <div className="w-full">
+        <section
+            className="pt-20 flex  flex-col lg:flex-row items-center gap-10"
+            id="contato"
+        >
+            <div className="w-full text-center leading-tight">
                 <h1 className=" text-[50px] font-extrabold">Se Interessou</h1>
                 <h1 className=" text-[50px] font-extrabold">
                     pela <span className="text-greenLigth ">plataforma</span>?

@@ -1,9 +1,8 @@
-'use client'
 import { imagesHeader } from '@/data/imagesHeader'
 import { useState, useEffect } from 'react'
-import Button from './Button'
+import Button from '../Button'
 
-const Header = () => {
+const Mobile = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     useEffect(() => {
@@ -22,14 +21,8 @@ const Header = () => {
     useEffect(() => {}, [currentImageIndex])
 
     return (
-        <div className="w-screen h-screen overflow-hidden relative">
-            <div
-                className="absolute inset-0 z-20"
-                style={{
-                    background:
-                        'linear-gradient(-60deg, transparent 0%, transparent 60%, #4A8B57 60%, #4A8B57 100%)',
-                }}
-            />
+        <div>
+            <div className="absolute inset-0 z-20 bg-greenLigth opacity-90" />
 
             {imagesHeader.map((image, index) => (
                 <img
@@ -45,18 +38,19 @@ const Header = () => {
             ))}
 
             <div className="w-full h-full absolute inset-0 flex items-center z-20">
-                <div className="w-full max-w-md rounded-lg ml-0 md:ml-[120px] pb-[200px] flex flex-col gap-6">
+                <div className="w-full flex flex-col gap-6 justify-center items-center px-6">
                     <img
+                        className="w-[80%]"
                         src="https://gedagro.com.br/images/logoEmail.png"
                         alt=""
                     />
-                    <div>
-                        <p className="text-white text-2xl">
+                    <div className="text-center">
+                        <p className="text-white text-xl">
                             Software destinado à organização e gestão das Boas
                             Práticas de Fabricação.
                         </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-col items-center gap-4 w-full">
                         <Button
                             title="Fale Conosco"
                             href="#contato"
@@ -74,4 +68,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Mobile

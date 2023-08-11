@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section = ({ imageOrder, children, content, src }) => {
     return (
-        <section className="flex flex-col md:flex-row items-center gap-10 pt-24 w-full">
+        <section className="flex flex-col md:flex-row items-center gap-10 pt-5 md:pt-24 w-full">
             <div
                 className={`${
                     imageOrder === 1 ? 'order-1 md:order-2' : 'order-2'
