@@ -1,9 +1,23 @@
 import React from 'react'
 import Form from './Form'
+import { useSpring, animated } from 'react-spring'
+import { useInView } from 'react-intersection-observer'
 
 const Page = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    })
+
+    const animationConfig = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0%)' : 'translateY(40%)',
+    })
+
     return (
-        <section
+        <animated.section
+            ref={ref}
+            style={animationConfig}
             className="pt-20 flex  flex-col lg:flex-row items-center gap-10"
             id="contato"
         >
@@ -15,7 +29,7 @@ const Page = () => {
                 <h1 className=" text-[50px] font-extrabold">Fale Conosco!</h1>
             </div>
             <Form />
-        </section>
+        </animated.section>
     )
 }
 

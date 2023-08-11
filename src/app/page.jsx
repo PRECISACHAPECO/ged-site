@@ -72,6 +72,7 @@ export default function Home() {
                         Porque vou usar o GEDagro?
                     </h1>
                 </Section>
+
                 <Section
                     src="security.svg"
                     content={
@@ -97,6 +98,7 @@ export default function Home() {
                         É essencial?
                     </h1>
                 </Section>
+
                 <Section
                     src="form.svg"
                     imageOrder={1}
