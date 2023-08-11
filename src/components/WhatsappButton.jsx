@@ -20,7 +20,7 @@ const WhatsappButton = () => {
                 <div
                     onMouseEnter={() => setShowMessage(true)}
                     onMouseLeave={() => setShowMessage(false)}
-                    className="p-5 rounded-full bg-[#00A884] hover:bg-[#006e56] transition-colors shadow-md shadow-black/30 cursor-pointer"
+                    className="p-5 rounded-full animate-bounce bg-[#00A884] hover:bg-[#006e56] transition-colors shadow-md shadow-black/30 cursor-pointer"
                 >
                     <a
                         href="https://api.whatsapp.com/send?phone=554988159192&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20GEDagro!"

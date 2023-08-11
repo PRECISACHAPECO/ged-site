@@ -7,7 +7,7 @@ const Footer = () => {
                 direitos reservados.
             </div>
             <div>
-                Mantido e desenvolvido por{' '}
+                Desenvolvido e mantido por{' '}
                 <a
                     className="font-semibold"
                     href="https://sisprecisa.com.br/"
