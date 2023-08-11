@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 import Button from '../Button'
 
 const Desktop = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [currentImageIndex, setCurrentImageIndex] = useState(
+        Math.floor(Math.random() * imagesHeader.length)
+    )
 
     useEffect(() => {
         let currentIndex = currentImageIndex

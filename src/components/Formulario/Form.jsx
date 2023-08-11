@@ -84,7 +84,7 @@ const Form = () => {
                             required
                         />
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col md:flex-row items-center gap-4">
                         <Input
                             register={register}
                             errors={errors}
@@ -98,7 +98,7 @@ const Form = () => {
                             name="telefone"
                         />
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col md:flex-row items-center gap-4">
                         <Input
                             register={register}
                             errors={errors}

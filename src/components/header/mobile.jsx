@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 import Button from '../Button'
 
 const Mobile = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [currentImageIndex, setCurrentImageIndex] = useState(
+        Math.floor(Math.random() * imagesHeader.length)
+    )
 
     useEffect(() => {
         let currentIndex = currentImageIndex
@@ -37,8 +39,8 @@ const Mobile = () => {
                 />
             ))}
 
-            <div className="w-full h-full absolute inset-0 flex items-center z-20">
-                <div className="w-full flex flex-col gap-6 justify-center items-center px-6">
+            <div className="w-full h-full absolute inset-0 flex  z-20">
+                <div className="w-full flex flex-col gap-10 justify-start items-center px-6 pt-20">
                     <img
                         className="w-[80%]"
                         src="https://gedagro.com.br/images/logoEmail.png"
