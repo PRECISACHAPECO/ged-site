@@ -57,10 +57,15 @@ const Header = () => {
                         </p>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Button title="Fale Conosco" href="#contato" />
+                        <Button
+                            title="Fale Conosco"
+                            href="#contato"
+                            icon={'message'}
+                        />
                         <Button
                             title="Acessar o Sistema"
                             href="http://app.gedagro.com.br"
+                            icon={'link'}
                         />
                     </div>
                 </div>

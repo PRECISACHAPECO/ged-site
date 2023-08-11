@@ -2,6 +2,8 @@
 import Form from '@/components/Formulario/page'
 import Header from '@/components/Header'
 import Section from '@/components/Section'
+import WhatsappButton from '@/components/WhatsappButton'
+import Footer from '@/components/Footer'
 
 export default function Home() {
     return (
@@ -159,6 +161,9 @@ export default function Home() {
                     </h1>
                 </Section>
                 <Form />
+
+                <WhatsappButton />
+                <Footer />
             </div>
         </main>
     )
