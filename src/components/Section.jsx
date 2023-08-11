@@ -1,8 +1,11 @@
+'use client'
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
+import { useState, useEffect } from 'react'
 
 const Section = ({ imageOrder, children, content, src }) => {
+    const [isMobile, setIsMobile] = useState(false)
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.5,
@@ -19,11 +22,25 @@ const Section = ({ imageOrder, children, content, src }) => {
         },
     })
 
+    const updateIsMobile = () => {
+        setIsMobile(window.innerWidth <= 768)
+    }
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsMobile(window.innerWidth <= 768)
+            window.addEventListener('resize', updateIsMobile)
+            return () => {
+                window.removeEventListener('resize', updateIsMobile)
+            }
+        }
+    }, [])
+
     return (
         <section className="flex flex-col md:flex-row items-center gap-10 pt-5 md:pt-24 w-full">
             <animated.div
                 ref={ref}
-                style={animationConfig}
+                style={!isMobile ? animationConfig : null}
                 className={`${
                     imageOrder === 1 ? 'order-1 md:order-2' : 'order-2'
                 } flex flex-col w-full`}

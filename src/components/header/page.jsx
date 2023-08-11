@@ -4,14 +4,13 @@ import Desktop from './desktop'
 import Mobile from './mobile'
 
 const Header = () => {
-    const [isMobile, setIsMobile] = useState(false) // Default to false
+    const [isMobile, setIsMobile] = useState(false)
 
     const updateIsMobile = () => {
         setIsMobile(window.innerWidth <= 768)
     }
 
     useEffect(() => {
-        // Check if we're on the client side before accessing window
         if (typeof window !== 'undefined') {
             setIsMobile(window.innerWidth <= 768)
             window.addEventListener('resize', updateIsMobile)
@@ -19,7 +18,7 @@ const Header = () => {
                 window.removeEventListener('resize', updateIsMobile)
             }
         }
-    }, []) // Empty dependency array for componentDidMount behavior
+    }, [])
 
     return (
         <div className="w-screen h-screen overflow-hidden relative">
