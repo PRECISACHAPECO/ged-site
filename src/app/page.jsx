@@ -4,12 +4,14 @@ import Section from '@/components/Section'
 import WhatsappButton from '@/components/WhatsappButton'
 import Footer from '@/components/Footer'
 import Header from '@/components/header/page'
+import ScrollButton from '@/components/ScrollButton'
 
 export default function Home() {
     return (
         <main>
             <Header />
             <div className="widthDefault pb-8">
+                <ScrollButton />
                 <Section
                     src="document.svg"
                     content={

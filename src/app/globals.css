@@ -30,3 +30,31 @@ body {
 ::-webkit-scroll-track {
     background-color: transparent;
 }
+
+.scroll-icon {
+    position: relative;
+    top: 3px;
+    width: 3px;
+    min-height: 8px;
+    display: block;
+    background: white;
+    border-radius: 5px;
+    animation: wheel-up-down 1.2s ease infinite;
+}
+
+@keyframes wheel-up-down {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(18px);
+        opacity: 0;
+    }
+}
