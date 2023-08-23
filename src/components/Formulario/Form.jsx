@@ -68,7 +68,7 @@ const Form = () => {
                     <h1 className="text-3xl font-semibold">Contato</h1>
                 </div>
                 <div className="pt-8 flex flex-col gap-4">
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4" id="form">
                         <Input
                             register={register}
                             errors={errors}

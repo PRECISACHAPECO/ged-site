@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
 const ScrollButton = () => {
-    const [isScrolling, setIsScrolling] = useState(false)
+    const [isScrolling, setIsScrolling] = useState(true)
 
     const handleScroll = () => {
-        if (window.scrollY < 100) {
-            setIsScrolling(true)
-        } else {
-            setIsScrolling(false)
-        }
+        setIsScrolling(window.scrollY < 100)
     }
 
     useEffect(() => {
